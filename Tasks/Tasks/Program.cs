@@ -7,10 +7,12 @@ namespace Tasks
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(" Salom ");
+            Console.WriteLine(" Salom \n ");         
+            Console.Write(" Enter number : ");         
+            int num = Convert.ToInt32(Console.ReadLine());
             Console.ForegroundColor= ConsoleColor.White;
 
-            Thread thread = new Thread(() => PrintNum(23));
+            Thread thread = new Thread(() => PrintNum(num));
 
             thread.Start();
             
